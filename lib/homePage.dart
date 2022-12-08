@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'main.dart';
 
@@ -20,6 +21,12 @@ class _HomePageState extends State<HomePage> {
               '\nTitle=${message.notification?.title},'
               '\nBody=${message.notification?.body},'
               '\nData=${message.data}';
+          // Get.showSnackbar(GetSnackBar(
+          //   title: message.notification?.title,
+          //   message: message.notification?.body,
+          //   backgroundColor: Colors.amber,
+          //   duration: const Duration(microseconds: 4000),
+          // ));
         } else {
           _lastMessage = 'Received a data message: ${message.data}';
         }
